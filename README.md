@@ -1,91 +1,39 @@
-# Skills
+<p align="center">
+  <img src="assets/logo.svg" alt="pstache logo" width="160">
+</p>
 
-This is a collection of skills that can be used to enhance the AI's capabilities or just to have a good laugh. These
-skills are designed to be small and enjoyable, sometimes even useful.
+<h1 align="center">pstache</h1>
 
-## Compatibility
+<p align="center">Pronounced "pistache". TheHolocoder's AI skills stack, built to evolve.</p>
 
-This repository is designed to be compatible with [npx skills](https://github.com/vercel-labs/skills) and should work
-with any Agent that supports the open standard.
+> Temporary README. Everything here is a work in progress.
 
-## Installation
+## What is this?
 
-You can install the skills by running the following command:
+pstache is the set of AI skills I use every day on my projects: reusable instructions that guide coding agents through planning, implementing, reviewing and verifying work.
 
-```
-npx skills add https://github.com/theholocoder/skills
-```
+The stack is never finished. Skills are added, reshaped and removed as my workflow changes.
 
-Or you can install only specific skills by running the following command:
+## Inspirations
 
-```
-npx skills add https://github.com/theholocoder/skills --skill yoda
-```
+- [pstack](https://github.com/cursor/plugins/tree/main/pstack) by poteto
+- [Skills For Real Engineers](https://github.com/mattpocock/skills) by Matt Pocock
 
-## Skills available
+The name is a pun: pstack + moustache, and "pstache" read with the French "p" sounds like *pistache*.
 
-### ASCII-This
-
-Renders text as ASCII art block letters, draws ASCII diagrams (boxes, arrows, system interactions, flowcharts, sequence
-diagrams), or produces freehand ASCII drawings of any subject (animals, objects, scenes, characters). Three modes are
-automatically selected based on the request: text art, diagram, or freehand drawing.
-
-Install it with:
+## Layout
 
 ```
-npx skills add https://github.com/theholocoder/skills --skill ascii-this
+skills/        active skills, one folder each with a SKILL.md
+_incubating/   work in progress, not loaded by any agent
+_deprecated/   retired skills, not loaded by any agent
+assets/        logo and images
 ```
 
-#### Example
+## Status
 
-> make a diagram of an HTTP request from the browser to the webserver
+Early draft. No skills are published yet.
 
-```text
-.-------------.          +-------------------+          +================+
-|    User     |          |   Web Browser     |          ||    Server    ||
-|  (You)      |          |                   |          ||  (Apache /   ||
-'-------------'          +-------------------+          ||   Nginx)     ||
-       |                          |                     +================+
-       |   [clicks a link /       |                            |
-       |    types a URL]          |                            |
-       |------------------------->|                            |
-       |                          |                            |
-       |                          |  [1: TCP Handshake SYN]   |
-       |                          |--------------------------->|
-       |                          |  [2: TCP Handshake SYN-ACK]
-       |                          |<---------------------------|
-       |                          |  [3: TCP Handshake ACK]   |
-       |                          |--------------------------->|
-       |                          |                            |
-       |                          |  [4: HTTP GET /index.html] |
-       |                          |  Host: example.com         |
-       |                          |  Accept: text/html         |
-       |                          |  User-Agent: Mozilla/5.0   |
-       |                          |--------------------------->|
-       |                          |                            |
-       |                          |                     [5: server processes
-       |                          |                      request, reads file]
-       |                          |                            |
-       |                          |  [6: HTTP 200 OK]          |
-       |                          |  Content-Type: text/html   |
-       |                          |  Content-Length: 3452      |
-       |                          |                            |
-       |                          |  <html>...</html>          |
-       |                          |<---------------------------|
-       |                          |                            |
-       |   [renders page]         |                            |
-       |<-------------------------|                            |
-       |                          |  [7: TCP FIN — close conn] |
-       |                          |--------------------------->|
-       |                          |<---------------------------|
+## License
 
-```
-
-### Yoda
-
-Forces the LLM to communicate exclusively in Yoda's speech style from Star Wars: inverted syntax, archaic diction,
-wisdom-laden phrasing.
-
-## Licence
-
-MIT
+[MIT](LICENSE)
